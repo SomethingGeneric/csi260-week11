@@ -25,7 +25,7 @@ class Temperature:
         self.celsius = degrees
 
     def __str__(self):
-        """String representation of self."""
+        """Return string representation of self."""
         return f"{str(self.celsius)}°C"
 
     def __repr__(self):
@@ -85,27 +85,27 @@ class Temperature:
     def __add__(self, other):
         """Add dunder method."""
         return self.mod("+", other)
-   
+
     def __radd__(self, other):
-        """Right hand add dunder method"""
+        """Right hand add dunder method."""
         return self.mod("+", other)
-   
+
     def __iadd__(self, other):
-        """In-place add method"""
+        """In-place add method."""
         return self.mod("+", other, True)
 
     def __sub__(self, other):
-        """Subtract dunder"""
+        """Subtract dunder."""
         return self.mod("-", other)
-    
+
     def __rsub__(self, other):
-        """Right hand sub dunder"""
+        """Right hand sub dunder."""
         return self.mod("-", other, False, True)
-    
+
     def __isub__(self, other):
-        """In-place sub method"""
+        """In-place sub method."""
         return self.mod("-", other, True)
-    
+
     def __hash__(self):
-        """Dict key hash method"""
+        """Return a dict key hash."""
         return hash(str(self))
